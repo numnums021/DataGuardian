@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: CRMBusinessHub
+
+logging:
+  level:
+    org.springframework.web: DEBUG
