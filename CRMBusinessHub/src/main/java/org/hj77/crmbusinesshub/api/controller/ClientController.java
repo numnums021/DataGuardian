@@ -15,7 +15,6 @@ public class ClientController {
 
     @PostMapping("/client")
     public String getClient(@RequestBody String str){
-        System.out.println("123");
         return hubService.getClient();
     }
 
