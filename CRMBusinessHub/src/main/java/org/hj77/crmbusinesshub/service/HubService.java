@@ -1,19 +1,40 @@
 package org.hj77.crmbusinesshub.service;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Service
 public class HubService {
-/*
-    private final RestTemplate restTemplate;
 
-    public HubService(RestTemplate restTemplate) {
+    private final RestTemplate restTemplate;
+    private final String DM_URL;
+
+    public HubService(RestTemplate restTemplate,
+                      @Value("${dm-service.url}") String DM_URL) {
         this.restTemplate = restTemplate;
+        this.DM_URL = DM_URL;
     }
-*/
+
     public String getClient(){
-        return "";
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+
+        Map<String, Object> requestBody = new HashMap<>();
+        requestBody.put("id", "123"); //todo
+
+        HttpEntity<Object> emptyEntity = new HttpEntity<>(requestBody, headers);
+
+        ResponseEntity<String> response = restTemplate.postForEntity(DM_URL, emptyEntity, String.class);
+
+        return response.getBody();
     }
 
     public String findClient(){
@@ -24,4 +45,15 @@ public class HubService {
         return "";
     }
 
+    public String lastOperations() {
+        return "";
+    }
+
+    public String saveClient() {
+        return "";
+    }
+
+    public String loanPayment() {
+        return "";
+    }
 }
