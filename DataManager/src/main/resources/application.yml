@@ -1,10 +1,28 @@
 server:
   port: 8081
-
-  spring:
-    application:
-      name: DataManager
-
+spring:
+  application:
+    name: DataManager
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: false # По желанию, отключить DDL auto-generation
+    open-in-view: false # Улучшение производительности, отключает Lazy loading в веб-запросах
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5433/DataGuardian
+    username: postgres
+    password: 1703
 logging:
   level:
-    org.springframework.web: DEBUG
+    org:
+      springframework:
+        web: DEBUG
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE

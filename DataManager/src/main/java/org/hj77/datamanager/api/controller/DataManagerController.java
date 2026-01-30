@@ -1,5 +1,6 @@
 package org.hj77.datamanager.api.controller;
 
+import lombok.RequiredArgsConstructor;
 import org.hj77.datamanager.service.DataManagerService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/dm")
 public class DataManagerController {
 
-    DataManagerService dataManagerService;
+    private final DataManagerService dataManagerService;
 
     DataManagerController(DataManagerService dataManagerService) {
         this.dataManagerService = dataManagerService;
