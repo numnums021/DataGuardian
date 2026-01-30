@@ -1,5 +1,8 @@
 package org.hj77.crmbusinesshub.api.controller;
 
+import org.hj77.crmbusinesshub.dto.ClientDTO;
+import org.springframework.web.bind.annotation.RestController;
+
 /**
  * Интерфейс контроллера клиентов, определяющий операции для взаимодействия с клиентами.
  */
@@ -7,10 +10,10 @@ public interface IClientController {
     /**
      * Получает информацию о клиенте по уникальному идентификатору.
      *
-     * @param str Уникальный идентификатор клиента
+     * @param client DTO клиента
      * @return Строка с информацией о клиенте
      */
-    String getClient(String str);
+    String getClient(ClientDTO client);
 
     /**
      * Осуществляет поиск клиента по различным критериям (например, ФИО, номеру телефона).

@@ -1,6 +1,7 @@
 package org.hj77.datamanager.api.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.hj77.datamanager.api.controller.dto.ClientDTO;
 import org.hj77.datamanager.service.DataManagerService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,9 +18,9 @@ public class DataManagerController {
         this.dataManagerService = dataManagerService;
     }
 
-    @PostMapping("/client")
-    public String getClient(@RequestBody String str){
-        return dataManagerService.getClient();
+    @PostMapping(value = "/client", consumes = "application/json")
+    public String getClient(@RequestBody ClientDTO data){
+        return dataManagerService.getClient(data.getId());
     }
 
     @PostMapping("/client/contact")
