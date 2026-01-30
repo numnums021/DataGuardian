@@ -1,6 +1,8 @@
 package org.hj77.crmbusinesshub.api.controller;
 
+import org.hj77.crmbusinesshub.dto.ClientDTO;
 import org.hj77.crmbusinesshub.service.HubService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -8,14 +10,14 @@ import org.springframework.web.bind.annotation.*;
 public class ImplClientController implements IClientController {
 
     private final HubService hubService;
-
+    @Autowired
     ImplClientController(HubService hubService){
         this.hubService = hubService;
     }
 
     @PostMapping("/client")
-    public String getClient(@RequestBody String str){
-        return hubService.getClient();
+    public String getClient(@RequestBody ClientDTO client){
+        return hubService.getClient(client.getId());
     }
 
     @PostMapping("/client/find")

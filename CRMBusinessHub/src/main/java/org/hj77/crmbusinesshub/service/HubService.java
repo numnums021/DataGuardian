@@ -15,20 +15,19 @@ import java.util.Map;
 public class HubService {
 
     private final RestTemplate restTemplate;
-    private final String DM_URL;
+    @Value("${service.dm-url}")
+    private String DM_URL;
 
-    public HubService(RestTemplate restTemplate,
-                      @Value("${dm-service.url}") String DM_URL) {
+    public HubService(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
-        this.DM_URL = DM_URL;
     }
 
-    public String getClient(){
+    public String getClient(String id){
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
 
         Map<String, Object> requestBody = new HashMap<>();
-        requestBody.put("id", "123"); //todo
+        requestBody.put("id", id);
 
         HttpEntity<Object> emptyEntity = new HttpEntity<>(requestBody, headers);
 

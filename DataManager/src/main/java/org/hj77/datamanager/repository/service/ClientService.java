@@ -16,6 +16,6 @@ public class ClientService {
 
     @Transactional
     public Optional<Client> findById(String id) {
-        return Optional.ofNullable(entityManager.find(Client.class, "1"));
+        return Optional.ofNullable(entityManager.find(Client.class, id));
     }
 }

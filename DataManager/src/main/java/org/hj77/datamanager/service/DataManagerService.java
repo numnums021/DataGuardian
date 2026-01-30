@@ -1,7 +1,10 @@
 package org.hj77.datamanager.service;
 
+import org.hj77.datamanager.repository.entity.Client;
 import org.hj77.datamanager.repository.service.ClientService;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class DataManagerService {
@@ -12,8 +15,10 @@ public class DataManagerService {
         this.clientService = clientService;
     }
 
-    public String getClient() {
-        return clientService.findById("1").toString();
+    public String getClient(String id) {
+        return clientService.findById(id)
+                            .map(Client::toString)
+                            .orElse("Клиент не найден");
     }
 
     public String getContact() {
