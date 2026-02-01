@@ -3,6 +3,8 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/CRMBusinessHub" />
+    <file type="web" url="file://$PROJECT_DIR$/CRMBusinessHubKt" />
+    <file type="web" url="file://$PROJECT_DIR$/DataGuardianKt" />
     <file type="web" url="file://$PROJECT_DIR$/DataManager" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">

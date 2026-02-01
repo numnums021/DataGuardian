@@ -12,6 +12,22 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/CRMBusinessHubKt" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/CRMBusinessHubKt" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/DataGuardianKt" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/DataGuardianKt" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/DataManager" />
         <option name="modules">
           <set>
