@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CRMBusinessHub.main.iml" filepath="$PROJECT_DIR$/.idea/modules/CRMBusinessHub.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/DataGuardian.iml" filepath="$PROJECT_DIR$/DataGuardian.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DataManager.main.iml" filepath="$PROJECT_DIR$/.idea/modules/DataManager.main.iml" />
     </modules>
   </component>
 </project>

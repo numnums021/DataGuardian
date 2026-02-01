@@ -1,9 +1,11 @@
 package org.hj77.crmbusinesshub.api.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.hj77.crmbusinesshub.dto.ClientDTO;
 import org.hj77.crmbusinesshub.service.HubService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
 
 @RestController
 @RequestMapping("/api")
