@@ -20,7 +20,12 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
+	implementation 'org.springframework.boot:spring-boot-starter-kafka'
+	implementation 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok' // Для обработки аннотаций
 	testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
+	testImplementation 'org.springframework.kafka:spring-kafka-test'
+	runtimeOnly 'org.springframework.boot:spring-boot-docker-compose'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 

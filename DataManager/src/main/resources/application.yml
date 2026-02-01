@@ -3,6 +3,14 @@ server:
 spring:
   application:
     name: DataManager
+  kafka:
+    bootstrap-servers: localhost:9092 # Адрес брокера Kafka
+    consumer:
+      group-id: my-group # Уникальная группа потребителей
+      auto-offset-reset: earliest # Читать с самого начала топика
+      enable-auto-commit: true # Авто-подтверждать полученные сообщения
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     generate-ddl: false # По желанию, отключить DDL auto-generation
